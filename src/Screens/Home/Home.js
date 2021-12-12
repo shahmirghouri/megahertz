@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -18,39 +18,80 @@ import ConstButton from '../../asset/button';
 import {hide} from 'yargs';
 import {color} from 'react-native-elements/dist/helpers';
 import Products from '../../asset/Products';
+import Boton from '../../asset/likeButton'
+
+
 
 export default function Home({navigation}) {
-  const categories = ['ALL', 'LAPTOP', 'MONITOR', 'GRAPHIC CARD'];
+  const categories = ['Categories', 'Favorites', 'My Ads', 'Top Sellers'];
   const [categoryIndex, setCategoryIndex] = React.useState(0);
+
+
 
   const CategoryList = () => {
     return (
-      <View style={styles.categoryContainer}>
-        {categories.map((item, index) => (
-          <TouchableOpacity
-            key={index}
-            onPress={() => setCategoryIndex(index)}
-            activeOpacity={0.8}>
-            <Text
-              key={index}
-              style={[
-                styles.categoryText,
-                categoryIndex == index && styles.categoryTextSelected,
-              ]}>
-              {item}
-            </Text>
+      <View>
+        <View style={styles.categoryIcon}>
+          
+          <TouchableOpacity >
+            <View style={{paddingLeft:20}}><MaterialCommunityIcons
+              name="format-list-bulleted-square"
+              size={30}
+              color={'#6902FC'}></MaterialCommunityIcons></View>
+            <Text >Categories</Text>
           </TouchableOpacity>
-        ))}
+          <TouchableOpacity>
+            <View style={{paddingLeft:13}}><MaterialCommunityIcons
+              name="heart-outline"
+              size={30}
+              color={'#6902FC'}></MaterialCommunityIcons></View>
+            <Text>Favorites</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={{paddingLeft:8}}><MaterialCommunityIcons
+              name="google-ads"
+              size={30}
+              color={'#6902FC'}></MaterialCommunityIcons></View>
+            <Text>My Ads</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={{paddingLeft:20}}><MaterialCommunityIcons
+              name="account-group-outline"
+              size={30}
+              color={'#6902FC'}></MaterialCommunityIcons></View>
+            <Text>Top Sellers</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* <View style={styles.categoryContainer}>
+          {categories.map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => setCategoryIndex(index)}
+              activeOpacity={0.8}>
+              <Text
+                key={index}
+                style={[
+                  styles.categoryText,
+                  categoryIndex == index && styles.categoryTextSelected,
+                ]}>
+                {item}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View> */}
       </View>
     );
   };
 
   const Card = ({Products}) => {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate(navigationString.DETAIL, Products)}>
         <View style={styles.card}>
           <View style={{alignItems: 'flex-end'}}>
-            <View
+            <TouchableOpacity>
+              {/* <View
               style={{
                 borderRadius: 15,
                 width: 30,
@@ -68,7 +109,9 @@ export default function Home({navigation}) {
                 color={
                   Products.like ? 'rgba(105, 2, 252, 1)' : 'rgba(0,0,0,0.4)'
                 }></MaterialCommunityIcons>
-            </View>
+            </View> */}
+            <Boton/>
+            </TouchableOpacity>
           </View>
 
           <View style={{height: 100, alignItems: 'center'}}>
@@ -142,6 +185,7 @@ export default function Home({navigation}) {
             // color='#6902FC'
           ></MaterialCommunityIcons>
         </View>
+
         <CategoryList />
       </View>
 
@@ -156,18 +200,3 @@ export default function Home({navigation}) {
     </SafeAreaView>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

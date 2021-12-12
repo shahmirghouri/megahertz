@@ -46,9 +46,19 @@ const styles = StyleSheet.create({
         borderRadius:10
         
     },
+    categoryIcon:{
+        flexDirection:'row',
+        marginTop:10,
+        marginBottom:20,
+        
+        justifyContent:'space-between',
+        
+        
+        
+    },
     categoryContainer:{
         flexDirection:'row',
-        marginTop:30,
+        marginTop:10,
         marginBottom:30,
         justifyContent:'space-between',
     },
