@@ -15,4 +15,5 @@ export { default as SignUp } from './SignUp/SignUp';
 export { default as Chat} from './Chat/Chat';
 export { default as Dashboard} from './Dashboard/Dashboard';
 export { default as Detail} from './ProductDetail/Detail';
+export { default as CategotyNavigation} from './CategoryNavigation/CategotyNavigation';
 

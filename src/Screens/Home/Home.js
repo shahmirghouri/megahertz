@@ -37,6 +37,7 @@ export default function Home({navigation}) {
             <View style={{paddingLeft:20}}><MaterialCommunityIcons
               name="format-list-bulleted-square"
               size={30}
+              onPress={() => navigation.navigate(navigationString.CATEGORYNAVIGATION)}
               color={'#6902FC'}></MaterialCommunityIcons></View>
             <Text >Categories</Text>
           </TouchableOpacity>
@@ -148,9 +149,10 @@ export default function Home({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text style={{fontSize: 24, fontWeight: 'bold'}}>Welcome to</Text>
+        
+        {/* <Text style={{fontSize: 24, fontWeight: 'bold'}}>Welcome to</Text> */}
         <Text style={{fontSize: 36, fontWeight: 'bold', color: '#6902FC'}}>
-          Megahertz
+          Home
         </Text>
 
         <View
@@ -158,7 +160,7 @@ export default function Home({navigation}) {
             // centring Tab Button...
             position: 'absolute',
 
-            top: 50,
+            top: 17,
             right: 10,
           }}>
           <TouchableOpacity

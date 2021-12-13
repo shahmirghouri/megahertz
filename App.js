@@ -102,7 +102,7 @@
 
 // export default App;
 // In App.js in a new project
-
+// import 'react-native-gesture-handler';
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import FlashMessage from 'react-native-flash-message';

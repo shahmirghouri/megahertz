@@ -8,5 +8,6 @@ export default {
     CHAT: "Chat",
     DASHBOARD:"Dashboard",
     DETAIL:"Detail",
+    CATEGORYNAVIGATION:"CategotyNavigation",
  
 }
