@@ -1,12 +1,14 @@
 
 import React from 'react';
-import { Animated, Dimensions, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Animated, Dimensions,TextInput, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useRef } from 'react';
 import navigationString from '../../constants/navigationString'
 import Home from '../Home/Home'
-import Chat from '../Chat/Chat'
+import Inbox from '../Chat/Inbox'
+import Search from '../Search/Search'
+
 
 
 const Tab = createBottomTabNavigator();
@@ -73,7 +75,7 @@ export default function Dashboard() {
           }
         })}></Tab.Screen>
 
-        <Tab.Screen name={"Search"} component={SearchScreen} options={{
+        <Tab.Screen name={"Search"} component={Search} options={{
           tabBarIcon: ({ focused }) => (
             <View style={{
               // centring Tab Button...
@@ -85,7 +87,9 @@ export default function Dashboard() {
                 name="magnify"
                 size={25}
                 color={focused ? '#6902FC' : 'gray'}
+                
               ></MaterialCommunityIcons>
+             
             </View>
           )
         }} listeners={({ navigation, route }) => ({
@@ -136,7 +140,7 @@ export default function Dashboard() {
           )
         }}></Tab.Screen>
 
-        <Tab.Screen name={"Chat"} component={Chat} options={{
+        <Tab.Screen name={"Inbox"} component={Inbox} options={{
           tabBarIcon: ({ focused }) => (
             <View style={{
               // centring Tab Button...

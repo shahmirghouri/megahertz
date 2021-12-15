@@ -20,7 +20,15 @@ const styles = StyleSheet.create({
         borderRadius:10,
         bottom:35,
         marginHorizontal:30
-    }
+    },
+    input:{
+        fontSize:18,
+        fontWeight:'bold',
+        color:'gray',
+        width:250
+
+
+    },
 })
 
 

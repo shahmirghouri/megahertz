@@ -1,4 +1,4 @@
-import {SignIn, SignUp, Explore1, Explore2, Home, Chat, Dashboard, ProductPage, Detail, CategotyNavigation} from '../Screens';
+import {SignIn, SignUp, Explore1, Explore2, Home, Chat, Dashboard, ProductPage, Detail, Search,Packages,Inbox,CategotyNavigation} from '../Screens';
 import * as React from 'react';
 import navigationString from '../constants/navigationString';
 
@@ -15,6 +15,9 @@ export default function(Stack) {
       <Stack.Screen name={navigationString.DASHBOARD} component={Dashboard} />
       <Stack.Screen name={navigationString.DETAIL} component={Detail} />
       <Stack.Screen name={navigationString.CATEGORYNAVIGATION} component={CategotyNavigation} />
+      <Stack.Screen name={navigationString.INBOX} component={Inbox} />
+      <Stack.Screen name={navigationString.PACKAGES} component={Packages} />
+      <Stack.Screen name={navigationString.SEARCH} component={Search} />
  
     </>
     

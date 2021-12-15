@@ -48,7 +48,7 @@ export default function Home({navigation}) {
               color={'#6902FC'}></MaterialCommunityIcons></View>
             <Text>Favorites</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity  onPress={()=> navigation.navigate(navigationString.PACKAGES)}>
             <View style={{paddingLeft:8}}><MaterialCommunityIcons
               name="google-ads"
               size={30}

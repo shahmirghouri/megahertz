@@ -9,5 +9,8 @@ export default {
     DASHBOARD:"Dashboard",
     DETAIL:"Detail",
     CATEGORYNAVIGATION:"CategotyNavigation",
+    INBOX: "Inbox",
+    PACKAGES: "Packages",
+    SEARCH:"Search",
  
 }

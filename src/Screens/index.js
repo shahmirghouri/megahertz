@@ -16,4 +16,7 @@ export { default as Chat} from './Chat/Chat';
 export { default as Dashboard} from './Dashboard/Dashboard';
 export { default as Detail} from './ProductDetail/Detail';
 export { default as CategotyNavigation} from './CategoryNavigation/CategotyNavigation';
+export { default as Inbox} from './Chat/Inbox';
+export { default as Packages} from './Packages/Packages';
+export { default as Search} from './Search/Search';
 
