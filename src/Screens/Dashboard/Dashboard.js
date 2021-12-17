@@ -8,6 +8,7 @@ import navigationString from '../../constants/navigationString'
 import Home from '../Home/Home'
 import Inbox from '../Chat/Inbox'
 import Search from '../Search/Search'
+import Profile from '../Profile/Profile'
 
 
 
@@ -164,7 +165,7 @@ export default function Dashboard() {
           }
         })}></Tab.Screen>
 
-        <Tab.Screen name={"Settings"} component={SettingsScreen} options={{
+        <Tab.Screen name={"Settings"} component={Profile} options={{
           tabBarIcon: ({ focused }) => (
             <View style={{
               // centring Tab Button...
