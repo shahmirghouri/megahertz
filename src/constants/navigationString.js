@@ -12,5 +12,6 @@ export default {
     INBOX: "Inbox",
     PACKAGES: "Packages",
     SEARCH:"Search",
+    POST:'Post',
  
 }

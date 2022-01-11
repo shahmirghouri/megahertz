@@ -1,4 +1,4 @@
-import {SignIn, SignUp, Explore1, Explore2, Home, Chat, Dashboard, ProductPage, Detail, Search,Packages,Inbox,CategotyNavigation} from '../Screens';
+import {SignIn, SignUp, Explore1, Explore2, Home, Chat, Dashboard, ProductPage, Post,Detail, Search,Packages,Inbox,CategotyNavigation} from '../Screens';
 import * as React from 'react';
 import navigationString from '../constants/navigationString';
 
@@ -18,6 +18,7 @@ export default function(Stack) {
       <Stack.Screen name={navigationString.INBOX} component={Inbox} />
       <Stack.Screen name={navigationString.PACKAGES} component={Packages} />
       <Stack.Screen name={navigationString.SEARCH} component={Search} />
+      <Stack.Screen name={navigationString.POST} component={Post} />
  
     </>
     

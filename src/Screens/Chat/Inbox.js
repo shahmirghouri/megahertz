@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     marginLeft: 19,
     alignContent: 'center',
     marginRight: 18,
-    marginBottom: 15,
+    marginBottom: 20,
   },
   bannerhead: {
     color: 'white',
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     backgroundColor: 'white',
     borderRadius: 9,
-    borderBottomWidth: 1,
+    borderBottomWidth: 0.5,
     borderColor: '#6902FC',
   },
   iconcontainer: {
@@ -189,6 +189,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 10,
     marginLeft: 19,
-    marginBottom: 10,
+    marginBottom: 5,
   },
 });

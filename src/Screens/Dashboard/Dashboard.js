@@ -9,13 +9,15 @@ import Home from '../Home/Home'
 import Inbox from '../Chat/Inbox'
 import Search from '../Search/Search'
 import Profile from '../Profile/Profile'
+import Post from '../Post/Post'
+
 
 
 
 const Tab = createBottomTabNavigator();
 
 // Hiding Tab Names...
-export default function Dashboard() {
+export default function Dashboard({navigation}) {
   // Animated Tab Indicator...
   const tabOffsetValue = useRef(new Animated.Value(0)).current;
   return (
@@ -93,15 +95,7 @@ export default function Dashboard() {
              
             </View>
           )
-        }} listeners={({ navigation, route }) => ({
-          // Onpress Update....
-          tabPress: e => {
-            Animated.spring(tabOffsetValue, {
-              toValue: getWidth(),
-              useNativeDriver: true
-            }).start();
-          }
-        })}></Tab.Screen>
+        }} ></Tab.Screen>
 
 
         {
@@ -109,10 +103,10 @@ export default function Dashboard() {
           // Extra Tab Screen For Action Button..
         }
 
-        <Tab.Screen name={"ActionButton"} component={EmptyScreen} options={{
-          tabBarIcon: ({ focused }) => (
+        <Tab.Screen name={"Post"} component={Post} options={{
+          tabBarIcon: () => (
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate(navigationString.POST)}>
               <View style={{
                 width: 55,
                 height: 55,
@@ -202,7 +196,6 @@ export default function Dashboard() {
           { translateX: tabOffsetValue }
         ]
       }}>
-
       </Animated.View> */}
       </Tab.Navigator>
 
@@ -282,4 +275,3 @@ const styles = StyleSheet.create({
 ////////////////////////////////////////////////
 /////////////////////////////////////////////////
 /////////////////////////////////////////////
-
