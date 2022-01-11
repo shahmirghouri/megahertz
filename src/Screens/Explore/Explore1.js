@@ -15,7 +15,7 @@ export default function Explore1({navigation}) {
 
          <ConstButton text="Let's get started" onPress={()=> navigation.navigate(navigationString.EXPLORE2)}/>
         
-         <TouchableOpacity onPress={()=> navigation.navigate(navigationString.DASHBOARD)}>
+         <TouchableOpacity onPress={()=> navigation.navigate(navigationString.SIGNIN)}>
 
             <Text style={styles.skip_btn}>Skip for now</Text>
         

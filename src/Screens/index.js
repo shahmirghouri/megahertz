@@ -19,6 +19,9 @@ export { default as CategotyNavigation} from './CategoryNavigation/CategotyNavig
 export { default as Inbox} from './Chat/Inbox';
 export { default as Packages} from './Packages/Packages';
 export { default as Search} from './Search/Search';
-export { default as Post} from './Post/Post';
+// export { default as Post} from './Post/Post';
+export { default as AddImage } from './Post/AddImage';
+export { default as Notification } from './Notification/Notification';
+// export { default as Review } from './Review/Review';
 
 

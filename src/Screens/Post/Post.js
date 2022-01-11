@@ -23,12 +23,21 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import ImagePicker from 'react-native-image-crop-picker';
+import AddPostView from './AddPostView';
+
 export default function Post({navigation}) {
   
     return (
+        
       <ScrollView>
+         
         <View>
+            
           <View style={styles.iconcontainer}>
+
+              
+              
             <TouchableOpacity style={styles.icon} onPress={() => navigation.goBack()}>
                 
               <Image source={require('../../asset/backicon1.png')} />
@@ -36,6 +45,9 @@ export default function Post({navigation}) {
 
             <Text style={styles.Heading}>Create Ad</Text>
           </View>
+
+          
+          <View style={{height:300}}><Text></Text></View>
           <View>
             <Text style={styles.price}>Enter Product Title</Text>
             <TextInput
@@ -154,7 +166,7 @@ export default function Post({navigation}) {
               </TouchableOpacity>
             </View>
           </View>
-          <ConstButton text="Upload Images" onPress={'#'} />
+          <ConstButton text="Upload Images" onPress={() => navigation.navigate(navigationString.ADDIMAGE)} />
         </View>
       </ScrollView>
     );

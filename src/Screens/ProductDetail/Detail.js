@@ -20,6 +20,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {color} from 'react-native-elements/dist/helpers';
 import Dashboard from '../Dashboard/Dashboard';
 import call from 'react-native-phone-call';
+// import Review  from '../Review/Review';
 
 
 
@@ -111,6 +112,17 @@ export default function Detail({navigation, route}) {
             <Text style={{fontSize:16, lineHeight:22, marginTop:10, marginBottom:20}}>{Products.about}</Text>
        
             <ConstButton text="Make a call" onPress={triggerCall}/>
+            {/* <View>
+            <TouchableOpacity style={{      borderRadius:8,
+       
+       marginVertical:25,
+       marginHorizontal:25,
+       paddingVertical:14,
+       paddingHorizontal:10,
+       backgroundColor: '#6902FC',}} onPress={() => navigation.navigate(navigationString.REVIEW)}>
+              <View><Text>fdfd</Text></View>
+            </TouchableOpacity>
+            </View> */}
            
             
         

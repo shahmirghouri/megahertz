@@ -12,6 +12,9 @@ export default {
     INBOX: "Inbox",
     PACKAGES: "Packages",
     SEARCH:"Search",
-    POST:'Post',
+    // POST:'Post',
+    ADDIMAGE:'AddImage',
+    NOTIFICATION: 'Notification',
+    // REVIEW:'Review',
  
 }

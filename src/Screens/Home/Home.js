@@ -164,7 +164,7 @@ export default function Home({navigation}) {
             right: 10,
           }}>
           <TouchableOpacity
-            onPress={() => navigation.navigate(navigationString.HOME)}>
+            onPress={() => navigation.navigate(navigationString.NOTIFICATION)}>
             <MaterialCommunityIcons
               name="bell-outline"
               size={25}></MaterialCommunityIcons>

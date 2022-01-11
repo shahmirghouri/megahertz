@@ -9,7 +9,8 @@ import Home from '../Home/Home'
 import Inbox from '../Chat/Inbox'
 import Search from '../Search/Search'
 import Profile from '../Profile/Profile'
-import Post from '../Post/Post'
+import AddImage from '../Post/AddImage'
+
 
 
 
@@ -103,10 +104,10 @@ export default function Dashboard({navigation}) {
           // Extra Tab Screen For Action Button..
         }
 
-        <Tab.Screen name={"Post"} component={Post} options={{
+        <Tab.Screen name={"Post"} component={AddImage} options={{
           tabBarIcon: () => (
 
-            <TouchableOpacity onPress={()=> navigation.navigate(navigationString.POST)}>
+            <TouchableOpacity onPress={()=> navigation.navigate(navigationString.ADDIMAGE)}>
               <View style={{
                 width: 55,
                 height: 55,

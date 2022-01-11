@@ -9,9 +9,10 @@ export default class Profile extends Component {
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity style={styles.settingicon}
-            onPress={() => {
-              alert('you clicked me');
-            }}>
+            // onPress={() => {
+            //   alert('you clicked me');
+            // }}
+            >
              <MaterialCommunityIcons
                 name="cog-outline"
                 size={25}
